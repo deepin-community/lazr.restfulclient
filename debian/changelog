@@ -1,0 +1,334 @@
+lazr.restfulclient (0.14.4-1) unstable; urgency=low
+
+  [ Debian Janitor ]
+  * Bump debhelper from deprecated 9 to 12.
+  * Set upstream metadata fields: Repository, Repository-Browse.
+
+  [ Ondřej Nový ]
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Stefano Rivera ]
+  * New upstream release.
+  * Extend upstream metadata.
+  * d/control: Update Uploader field with new Debian Python Team contact
+    address.
+  * Bump Standards-Version to 4.6.0, no changes needed.
+  * Declare Rules-Requires-Root: no.
+  * Bump copyright years.
+  * Drop explicit Depends on python3-pkg-resources and python3-simplejson, no
+    longer needed.
+  * Bump watch file version to 4.
+  * Bump debhelper compat level to 13.
+
+ -- Stefano Rivera <stefanor@debian.org>  Fri, 17 Sep 2021 14:19:49 -0700
+
+lazr.restfulclient (0.14.2-2) unstable; urgency=medium
+
+  * Team upload.
+  * Use debhelper-compat instead of debian/compat.
+  * d/control: Fix wrong Vcs-*.
+  * Drop Python 2 support (Closes: #936822).
+  * Enable autopkgtest-pkg-python testsuite.
+
+ -- Ondřej Nový <onovy@debian.org>  Wed, 09 Oct 2019 11:55:48 +0200
+
+lazr.restfulclient (0.14.2-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Explicitly depend on python{,3}-httplib2.
+
+ -- Colin Watson <cjwatson@debian.org>  Sat, 17 Nov 2018 17:28:17 +0000
+
+lazr.restfulclient (0.14.1-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Ondřej Nový ]
+  * d/control: Remove ancient X-Python-Version field
+  * d/control: Remove ancient X-Python3-Version field
+  * Convert git repository from git-dpm to gbp layout
+
+  [ Colin Watson ]
+  * New upstream release.
+
+ -- Colin Watson <cjwatson@debian.org>  Fri, 16 Nov 2018 10:26:17 +0000
+
+lazr.restfulclient (0.14.0-1) unstable; urgency=medium
+
+  [ Colin Watson ]
+  * New upstream release.
+  * Move VCS to salsa.debian.org.
+  * Fix debian/watch to allow different compression extensions.
+
+  [ Ondřej Nový ]
+  * d/copyright: Use https protocol in Format field
+
+ -- Colin Watson <cjwatson@debian.org>  Tue, 08 May 2018 10:19:35 +0100
+
+lazr.restfulclient (0.13.5-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release:
+    - Fix handling of 304 responses with an empty body on Python 3
+      (LP: #1714960).
+
+ -- Colin Watson <cjwatson@debian.org>  Mon, 04 Sep 2017 17:10:30 +0100
+
+lazr.restfulclient (0.13.4-6) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Ondřej Nový ]
+  * Fixed VCS URL (https).
+
+  [ SVN-Git Migration ]
+  * git-dpm config.
+  * Update Vcs fields for git migration.
+
+  [ Mattia Rizzolo ]
+  * Cherry-pick from upstream: Update imports for urlencode.
+    Thanks to Dimitri John Ledkov for the patch.  LP: #1425609
+  * Bump Standards-Version to 3.9.8, no changes needed.
+  * Run wrap-and-sort.
+
+ -- Mattia Rizzolo <mattia@debian.org>  Thu, 19 May 2016 09:25:43 +0000
+
+lazr.restfulclient (0.13.4-5) unstable; urgency=medium
+
+  * Upload to unstable.
+  * Bump Standards-Version to 3.9.6, no changes needed.
+
+ -- Stefano Rivera <stefanor@debian.org>  Fri, 03 Jul 2015 17:08:35 -0700
+
+lazr.restfulclient (0.13.4-4) experimental; urgency=medium
+
+  * Decode headers before comparison (LP: #1414075)
+  * Fix urllib unquote imports (LP: #1414055)
+
+ -- Dimitri John Ledkov <dimitri.j.ledkov@linux.intel.com>  Thu, 12 Feb 2015 23:40:09 +0000
+
+lazr.restfulclient (0.13.4-3) experimental; urgency=medium
+
+  * Fix json loads (LP: #1403524).
+
+ -- Dimitri John Ledkov <dimitri.j.ledkov@linux.intel.com>  Wed, 21 Jan 2015 18:57:29 +0000
+
+lazr.restfulclient (0.13.4-2) experimental; urgency=medium
+
+  * Correct upstream tarball release... use .bz2 tarball
+  * Correct python3 package generation.
+
+ -- Dimitri John Ledkov <dimitri.j.ledkov@linux.intel.com>  Sat, 06 Dec 2014 02:00:40 +0000
+
+lazr.restfulclient (0.13.4-1) experimental; urgency=medium
+
+  * New upstream (bug-fix) release.
+  * Python 3 support.
+  * Verify upstream release gpg signature.
+  * Drop all patches, integrated upstream.
+  * Switch to pybuild.
+
+ -- Dimitri John Ledkov <dimitri.j.ledkov@linux.intel.com>  Fri, 05 Dec 2014 23:54:47 +0000
+
+lazr.restfulclient (0.13.3-1) unstable; urgency=low
+
+  [ Stefano Rivera ]
+  * New upstream release.
+  * Upload to unstable, wheezy released.
+  * Bump debhelper dependency to 8.1 for build-{arch,indep} support.
+
+  [ Jakub Wilk ]
+  * Use canonical URIs for Vcs-* fields.
+
+ -- Stefano Rivera <stefanor@debian.org>  Sun, 26 May 2013 00:34:03 +0200
+
+lazr.restfulclient (0.13.1-1) experimental; urgency=low
+
+  * New upstream release.
+     - Now cache-safe for concurrent clients.
+  * Upload to experimental, as we are in freeze.
+  * Get rid of .pth files, dh_python2's namespace support is sufficient.
+    (LP: #796992, #583426)
+  * Depend on python-lazr.uri. (LP: #876445)
+  * Update watch file to work with secure LP urls for the tarballs.
+  * Bump Standards-Version to 3.9.4, no changes needed.
+  * Bump machine readable copyright format to 1.0, no changes needed.
+  * Updated copyright years.
+
+ -- Stefano Rivera <stefanor@debian.org>  Tue, 06 Nov 2012 11:53:59 +0200
+
+lazr.restfulclient (0.12.0-2) unstable; urgency=low
+
+  * New maintainer.
+  * Move test dependencies to extras_require so that setuptools doesn't think
+    they are needed for the code to work. Thanks James Westby.
+    (Closes: #656353, LP: #918307)
+  * Drop pydist-overrides, now that these dependencies won't appear in
+    requires.txt.
+  * Clean egg-info.
+  * Wrap and sort long lines in debian/control.
+  * Convert debian/copyright to DEP5 machine-readable format.
+  * Drop Breaks: ${python:Breaks}. No longer used by dh_python2.
+
+ -- Stefano Rivera <stefanor@debian.org>  Mon, 23 Jan 2012 16:57:32 +0200
+
+lazr.restfulclient (0.12.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/docs:
+    - Do not install NEWS.txt, already provided as changelog.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Thu, 11 Aug 2011 18:30:05 +0200
+
+lazr.restfulclient (0.11.2-2) unstable; urgency=low
+
+  * Python transition:
+    - Add support for python2.7
+    - Drop support for python2.5
+  * debian/control:
+    - Bump Standards-Version to 3.9.2, no changes required.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Mon, 18 Apr 2011 22:35:05 +0200
+
+lazr.restfulclient (0.11.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Upload to unstable.
+  * debian/pydist-overrides:
+    - Do not require wsgi_intercept as dependency.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Mon, 14 Feb 2011 21:42:26 +0100
+
+lazr.restfulclient (0.11.1-1) experimental; urgency=low
+
+  * New upstream release.
+  * Switch to dh_python2.
+  * debian/control:
+    - Bump Standards-Version to 3.9.1, no changes required.
+  * debian/pydist-overrides:
+    - Do not require lazr.authentication as dependency.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Sat, 04 Dec 2010 12:53:58 +0100
+
+lazr.restfulclient (0.9.21-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Sat, 24 Jul 2010 15:54:08 +0200
+
+lazr.restfulclient (0.9.20-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/patches/no_package_data.patch:
+    - Do not install documentation files in Python module directory.
+  * debian/control:
+    - Bump Standards-Version to 3.9.0, no changes required.
+  * debian/docs:
+    - Install documentation files under /usr/share/doc.
+  * debian/rules:
+    - Install version.txt to the right location.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Mon, 28 Jun 2010 23:35:48 +0200
+
+lazr.restfulclient (0.9.18-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Thu, 17 Jun 2010 20:28:38 +0200
+
+lazr.restfulclient (0.9.14-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control:
+    - Remove Conflicts/Replaces with python-lazr-restfulclient, they were
+      useful for Ubuntu Lucid only.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Thu, 29 Apr 2010 21:42:36 +0200
+
+lazr.restfulclient (0.9.13+ds-1) unstable; urgency=low
+
+  * New upstream release.
+  * Repack upstream tarball to include COPYING.txt and HACKING.txt files,
+    they were removed from 0.9.13 release by mistake.
+  * Always depend on python-simplejson, drop the alternative python2.6
+    dependency, as restfulclient explicitly needs simplejson, not json
+    provided by python2.6
+  * Drop optional dependency on virtual package python-zopeinterface.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Sat, 10 Apr 2010 13:09:32 +0200
+
+lazr.restfulclient (0.9.12-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control:
+    - Move myself as Maintainer, DPMT as Uploaders.
+  * debian/rules:
+    - Install upstream changelog.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Sat, 13 Mar 2010 13:14:13 +0100
+
+lazr.restfulclient (0.9.11-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/patches/comparison_fixes.patch:
+    - Removed, included upstream.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Sun, 14 Feb 2010 16:38:47 +0100
+
+lazr.restfulclient (0.9.10-2) unstable; urgency=low
+
+  * debian/patches/comparison_fixes.patch:
+    - Cherrypick a fix from upstream bzr repository to fix comparisons of
+      entries and hosted files with None (LP: #495326).
+  * debian/control:
+    - Bump Standards-Version to 3.8.4, no changes required.
+  * Switch to format 3.0 (quilt).
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Wed, 03 Feb 2010 22:08:45 +0100
+
+lazr.restfulclient (0.9.10-1) unstable; urgency=low
+
+  * New upstream release.
+    - Do not download missing build-dependencies (Closes: #552949).
+  * debian/patches/no_deps.patch:
+    - Removed, it is no longer useful.
+  * debian/copyright:
+    - Update with new copyright informations.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Tue, 03 Nov 2009 21:30:42 +0100
+
+lazr.restfulclient (0.9.3-1) unstable; urgency=low
+
+  * Initial Debian release (Closes: #551275).
+  * Package taken from Ubuntu, major changes introduced are:
+    - Switch to debhelper 7.
+    - Switch to python-support.
+    - Binary package renamed to python-lazr.uri to match module name.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Mon, 19 Oct 2009 14:44:34 +0200
+
+lazr.restfulclient (0.9.3-0ubuntu3) karmic; urgency=low
+
+  * The package name is now python-zope.interface, thank Eric Appleman.
+    (LP: #424751)
+
+ -- James Westby <james.westby@ubuntu.com>  Mon, 07 Sep 2009 10:51:19 +0100
+
+lazr.restfulclient (0.9.3-0ubuntu2) karmic; urgency=low
+
+  * Add python-pkg-resources to Depends, thanks Martin Pitt.
+
+ -- James Westby <james.westby@ubuntu.com>  Thu, 27 Aug 2009 11:54:36 +0100
+
+lazr.restfulclient (0.9.3-0ubuntu1) karmic; urgency=low
+
+  * Initial release.
+  * Comment out setup_requires in setup.py so that setuptools doesn't try and
+    download things at build time.
+  * Comment out dependencies in setup.py that are just needed for running the
+    tests. It sucks, but there are about 10 new packages needed just to allow
+    the test suite to run.
+
+ -- James Westby <james.westby@ubuntu.com>  Fri, 10 Jul 2009 16:43:44 +0100

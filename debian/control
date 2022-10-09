@@ -1,0 +1,31 @@
+Source: lazr.restfulclient
+Section: python
+Priority: optional
+Maintainer: Stefano Rivera <stefanor@debian.org>
+Uploaders: Debian Python Team <team+python@tracker.debian.org>
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-python,
+ python3-all,
+ python3-setuptools
+Standards-Version: 4.6.0
+Homepage: https://launchpad.net/lazr.restfulclient
+Vcs-Git: https://salsa.debian.org/python-team/packages/lazr.restfulclient.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/lazr.restfulclient
+Testsuite: autopkgtest-pkg-python
+Rules-Requires-Root: no
+
+Package: python3-lazr.restfulclient
+Architecture: all
+Depends:
+ python3-httplib2 (>= 0.7.7),
+ python3-lazr.uri,
+ python3-wadllib (>= 1.1.4),
+ ${misc:Depends},
+ ${python3:Depends}
+Description: client for lazr.restful-based web services (Python 3)
+ A programmable client library that takes advantage of the commonalities
+ among lazr.rest web services to provide added functionality on top
+ of wadllib.
+ .
+ This package is for Python 3.
