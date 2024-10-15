@@ -1,7 +1,8 @@
 COPYING.txt
-HACKING.rst
 NEWS.rst
 README.rst
+pyproject.toml
+setup.cfg
 setup.py
 src/lazr/__init__.py
 src/lazr.restfulclient.egg-info/PKG-INFO
@@ -9,7 +10,6 @@ src/lazr.restfulclient.egg-info/SOURCES.txt
 src/lazr.restfulclient.egg-info/dependency_links.txt
 src/lazr.restfulclient.egg-info/namespace_packages.txt
 src/lazr.restfulclient.egg-info/not-zip-safe
-src/lazr.restfulclient.egg-info/pbr.json
 src/lazr.restfulclient.egg-info/requires.txt
 src/lazr.restfulclient.egg-info/top_level.txt
 src/lazr/restfulclient/__init__.py
@@ -19,6 +19,7 @@ src/lazr/restfulclient/errors.py
 src/lazr/restfulclient/resource.py
 src/lazr/restfulclient/authorize/__init__.py
 src/lazr/restfulclient/authorize/oauth.py
+src/lazr/restfulclient/docs/CONTRIBUTING.rst
 src/lazr/restfulclient/docs/Makefile
 src/lazr/restfulclient/docs/NEWS.rst
 src/lazr/restfulclient/docs/authorizer.standalone.rst

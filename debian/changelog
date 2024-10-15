@@ -1,3 +1,38 @@
+lazr.restfulclient (0.14.6-2) unstable; urgency=medium
+
+  * Team upload.
+  * Use pybuild-plugin-pyproject.
+
+ -- Colin Watson <cjwatson@debian.org>  Mon, 26 Aug 2024 16:32:23 +0100
+
+lazr.restfulclient (0.14.6-1) unstable; urgency=medium
+
+  * Team Upload
+  * New upstream version 0.14.6
+  * remove Python 3.12 patch applied upstream
+  * add a patch to remove usage of python3-six
+
+ -- Alexandre Detiste <tchet@debian.org>  Wed, 10 Jan 2024 02:04:33 +0100
+
+lazr.restfulclient (0.14.5-2) unstable; urgency=medium
+
+  * Patch: Python 3.12 support. (LP: #2045169)
+  * Update standards version to 4.6.2, no changes needed.
+
+ -- Stefano Rivera <stefanor@debian.org>  Thu, 07 Dec 2023 10:21:22 -0400
+
+lazr.restfulclient (0.14.5-1) unstable; urgency=medium
+
+  [ Stefano Rivera ]
+  * New upstream release.
+  * Upstream dropped HACKING.rst, remove from docs.
+  * Bump copyright years.
+
+  [ Debian Janitor ]
+  * Update standards version to 4.6.1, no changes needed.
+
+ -- Stefano Rivera <stefanor@debian.org>  Wed, 19 Oct 2022 08:21:04 +0200
+
 lazr.restfulclient (0.14.4-1) unstable; urgency=low
 
   [ Debian Janitor ]
