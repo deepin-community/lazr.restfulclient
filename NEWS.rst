@@ -2,6 +2,21 @@
 NEWS for lazr.restfulclient
 ===========================
 
+0.14.6 (2024-01-03)
+===================
+
+  - Add ``Read the Docs`` configuration
+  - Add Python 3.12 compatibility
+
+0.14.5 (2022-10-15)
+===================
+
+  - Add ``pre-commit`` configuration.
+  - Publish documentation on Read the Docs.
+  - Apply black code formatter.
+  - Apply inclusive naming via the woke pre-commit hook.
+  - Fix ``HostedFile.open(mode="w")`` on Python 3.
+
 0.14.4 (2021-09-13)
 ===================
 

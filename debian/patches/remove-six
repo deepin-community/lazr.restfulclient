@@ -1,0 +1,45 @@
+From: Alexandre Detiste <tchet@debian.org>
+Subject: remove usage of python3-six
+
+--- a/setup.py
++++ b/setup.py
+@@ -72,7 +72,6 @@
+         'importlib-metadata; python_version < "3.8"',
+         "oauthlib",
+         "setuptools",
+-        "six",
+         "wadllib>=1.1.4",
+     ],
+     url="https://launchpad.net/lazr.restfulclient",
+--- a/src/lazr/restfulclient/authorize/oauth.py
++++ b/src/lazr/restfulclient/authorize/oauth.py
+@@ -30,9 +30,8 @@
+ import socket
+ import stat
+ 
+-import six
+ from oauthlib import oauth1
+-from six.moves.urllib.parse import parse_qs, urlencode
++from urllib.parse import parse_qs, urlencode
+ 
+ from lazr.restfulclient.authorize import HttpAuthorizer
+ from lazr.restfulclient.errors import CredentialsFileError
+@@ -95,7 +94,7 @@
+         return cls(key, secret)
+ 
+ 
+-class TruthyString(six.text_type):
++class TruthyString(str):
+     """A Unicode string which is always true."""
+ 
+     def __bool__(self):
+@@ -296,9 +295,4 @@
+         client.resource_owner_key = TruthyString(client.resource_owner_key)
+         _, signed_headers, _ = client.sign(absolute_uri)
+         for key, value in signed_headers.items():
+-            # client.sign returns Unicode headers; convert these to native
+-            # strings.
+-            if six.PY2:
+-                key = key.encode("UTF-8")
+-                value = value.encode("UTF-8")
+             headers[key] = value
